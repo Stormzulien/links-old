@@ -30,7 +30,7 @@ let newMsgShown = JSON.parse(localStorage.getItem("newMsgShown")) || false
 if (window.location.pathname === "/links-old/" && !newMsgShown && globalConfig.linksOldSettings.showUpdateMsg) {
   document.querySelector("body").innerHTML += `
     <div id="new-msg">
-      <a href="https://stormzulien.github.io/links/" target="_blank">Go to the updated (better) version of this page :D</a>
+      <a href="https://stormzulien.github.io/links/" target="_parent">Go to the updated (better) version of this page :D</a>
       <button title="Dismiss message" id="new-msg-close-btn">
         <img src="./images/close.svg" alt="Close icon" draggable="false">
       </button>
@@ -43,4 +43,5 @@ if (window.location.pathname === "/links-old/" && !newMsgShown && globalConfig.l
       localStorage.setItem("newMsgShown", JSON.stringify(newMsgShown));
       document.querySelector("#new-msg").remove();
     });
+
 }
