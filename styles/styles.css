@@ -211,3 +211,33 @@ button:active {
   background: linear-gradient(122deg, rgba(163, 183, 199, 1) 0%, rgba(126, 215, 217, 1) 100%);
 }
 
+#redirect-overlay {
+  background-color: #F4F4F4;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  z-index: 999;
+  /* visibility: hidden; */
+}
+
+/* #redirect-overlay.shown {
+  visibility: visible;
+} */
+
+#redirect-overlay.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (prefers-color-scheme: dark) { 
+  #redirect-overlay {
+    background-color: #363636;
+    color: white;
+  }
+}
