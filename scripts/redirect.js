@@ -1,7 +1,7 @@
 "use strict";
 
-// import globalConfig from "https://stormzulien.github.io/data/global_config.js";
-import globalConfig from "../../data/global_config.js";
+import globalConfig from "https://stormzulien.github.io/data/global_config.js";
+// import globalConfig from "../../data/global_config.js";
 
 // const redirect = false;
 const redirect = globalConfig.linksOldRedirect;
