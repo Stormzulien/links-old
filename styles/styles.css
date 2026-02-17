@@ -241,3 +241,56 @@ button:active {
     color: white;
   }
 }
+
+#new-msg {
+  font-size: 0.96em;
+  position: fixed;
+  bottom: 0.3em;
+  left: 0.3em;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  border-radius: 1em;
+  filter: drop-shadow(0px 0px 3px #00000033);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-msg a {
+  padding: 0.6em 1em;
+  padding-right: 0.4em;
+  color: black;
+  text-decoration: none;
+}
+
+#new-msg a:hover {
+  text-decoration: underline;
+}
+
+#new-msg button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  padding: 0.6em 1em;
+  width: 3em;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s;
+}
+
+#new-msg button:hover {
+  background-color: #FFFFFF5e
+}
+
+#new-msg button:active {
+  opacity: 0.6;
+}
+
+#new-msg button img {
+  height: 2em;
+}
