@@ -3,5 +3,6 @@
 const redirect = true;
   
 if (redirect) {
-  window.location.replace("https://stormzulien.github.io/links");
+  const pn = window.location.pathname.replace("/links-old/", "");
+  window.location.replace(`https://stormzulien.github.io/links/${pn}`);
 }
