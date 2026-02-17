@@ -1,9 +1,6 @@
 "use strict";
 
-import globalConfig from "../../data/globalConfig.js";
-
-// const redirect = true;
-const redirect = globalConfig.linksOldRedirect;
+const redirect = true;
   
 if (redirect) {
   window.location.replace("https://stormzulien.github.io/links");
