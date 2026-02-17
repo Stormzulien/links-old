@@ -1,6 +1,6 @@
 "use strict";
 
-import globalConfig from "../../data/globalConfig";
+import globalConfig from "../../data/globalConfig.js";
 
 // const redirect = true;
 const redirect = globalConfig.linksOldRedirect;
