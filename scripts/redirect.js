@@ -1,6 +1,6 @@
 "use strict";
 
-// toggle messgae here
+// toggle message here
 const showMsg = true;
 
 let newMsgShown = JSON.parse(localStorage.getItem("newMsgShown")) || false;
@@ -22,5 +22,6 @@ if (window.location.pathname === "/links-old/" && !newMsgShown && showMsg) {
       document.querySelector("#new-msg").remove();
     });
 }
+
 
 
