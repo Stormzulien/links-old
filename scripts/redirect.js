@@ -20,5 +20,5 @@ if (window.location.pathname === "/links-old/" && !newMsgShown && showMsg) {
       localStorage.setItem("newMsgShown", JSON.stringify(newMsgShown));
       document.querySelector("#new-msg").remove();
     });
-
 }
+
