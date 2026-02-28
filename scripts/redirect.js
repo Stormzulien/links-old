@@ -1,38 +1,15 @@
 "use strict";
 
-// import globalConfig from "https://stormzulien.github.io/data/global_config.js";
-import globalConfig from "../../data/global_config.js";
+const showMsg = true;
 
-// const redirect = false;
-const redirect = globalConfig.linksOldSettings.redirectToNew;
+let newMsgShown = JSON.parse(localStorage.getItem("newMsgShown")) || false;
 
-if (redirect) {
-  // document.querySelector("body").innerHTML += `
-  //   <div id="redirect-overlay">
-  //     <span>Redirecting to newer page...</span>
-  //   </div>
-  // `;
-
-  // const redirectOverlay = document.querySelector("#redirect-overlay");
-  // redirectOverlay.classList.add("hidden");
-  
-  const pn = window.location.pathname.replace("/links-old/", "");
-  console.warn(`Redirecting to: https://stormzulien.github.io/links/${pn}`);
-  window.location.replace(`https://stormzulien.github.io/links/${pn}`);
-  
-} else {
-  const redirectOverlay = document.querySelector("#redirect-overlay");
-  redirectOverlay.classList.add("hidden");
-}
-
-let newMsgShown = JSON.parse(localStorage.getItem("newMsgShown")) || false
-
-if (window.location.pathname === "/links-old/" && !newMsgShown && globalConfig.linksOldSettings.showUpdateMsg) {
+if (window.location.pathname === "/links-old/" && !newMsgShown && showMsg) {
   document.querySelector("body").innerHTML += `
     <div id="new-msg">
       <a href="https://stormzulien.github.io/links/" target="_parent">Go to the updated (better) version of this page :D</a>
       <button title="Dismiss message" id="new-msg-close-btn">
-        <img src="./images/close.svg" alt="Close icon" draggable="false">
+        <img src="/images/close.svg" alt="Close icon" draggable="false">
       </button>
     </div>
   `;
@@ -43,5 +20,4 @@ if (window.location.pathname === "/links-old/" && !newMsgShown && globalConfig.l
       localStorage.setItem("newMsgShown", JSON.stringify(newMsgShown));
       document.querySelector("#new-msg").remove();
     });
-
 }
